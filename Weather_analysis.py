@@ -1,8 +1,6 @@
 import requests
 
 
-
-
 def format_response(weather):
     try:
         name = weather['name'] #informacje z dictionary
@@ -16,9 +14,12 @@ def format_response(weather):
 def  get_weather(city):
     weather_key = 'ce5aac7c1aacbd6070822b7c504a0ef9'
     url = 'https://api.openweathermap.org/data/2.5/weather'
-    params = {'APPID': weather_key, 'q': city, 'units':'Metric'}
-    response = requests.get(url, params=params)
+    parameters = {'APPID': weather_key, 'q': city, 'units':'Metric'}
+    response = requests.get(url, params=parameters)
     weather = response.json()
+    print(format_response(weather))
 
-    label['text'] = format_response(weather)
-
+city = input("Give the city name\n")
+print(get_weather(city))
+#Poznan=get_weather("Poznań")
+#print(Poznan)
