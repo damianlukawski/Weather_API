@@ -21,49 +21,25 @@ def  get_weather(id):
     return format_response(weather)
 
 
-with open('city.list.json', encoding="utf8") as fd:
-    json_data = json.load(fd)
+#with open('city.list.json', encoding="utf8") as fd:
+#    json_data = json.load(fd)
     #pprint(json_data)
 
 #for i in json_data:
 #rint(type(json_data[0]['name']))
 #print(json_data[1]['name'])
-print(len(json_data))
+with open('city.list.json', 'r', encoding="utf-8") as fd:
+   json_data = json.load(fd)
+
+
+length=len(json_data)
 i=0
 list=[]
-while i <len(json_data)-1:
+while i <100000:
+    id = json_data[i]['id']
+    print(id)
     i += 1
-    print (i)
-    if type(json_data[i]['name']) == str:
-        list.append(json_data[i]['name'])
-    else:
-        break
+    if type(id) == int:
+        list.append(id)
 
-#print(len(get_weather(i)))
 print(list)
-
-#print(type(list))
-#i=820
-#while i<835:
-#    print(i)
-#    i+=1
-#    if type(get_weather(i)) == str:
-#       list.append(get_weather(i))
-#       print(get_weather(i))
-        #else:
-        #    break
-#list.append(get_weather(833))
-#print(list)
-
-
-
-#print(json_dumps)
-#input("type anything to end")
-
-#f = open("city.list.json", "r")
-#print(f.read())
-#i=1
-#while i<1000:
-#    try:
-#        resp = requests.get(url, params=parameters)
-
