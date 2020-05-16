@@ -28,14 +28,14 @@ def  get_weather(id):
 #for i in json_data:
 #rint(type(json_data[0]['name']))
 #print(json_data[1]['name'])
-with open('city.list.json', 'r', encoding="utf-8") as fd:
+with open('city.list.json', 'r', encoding="utf-8") as fd: #remebmer about encoding
    json_data = json.load(fd)
 
 
 length=len(json_data)
 i=0
 list=[]
-while i <100000:
+while i <len(json_data)-1:
     id = json_data[i]['id']
     print(id)
     i += 1

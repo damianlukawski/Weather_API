@@ -1,5 +1,6 @@
 import requests
 
+
 def format_response(weather):
     try:
         name = weather['name'] #informacje z dictionary

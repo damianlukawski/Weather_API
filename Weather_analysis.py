@@ -1,7 +1,7 @@
 import requests
 import json
 
-
+#the main app for weather analysis
 
 def  get_weather(id):
     weather_key = 'ce5aac7c1aacbd6070822b7c504a0ef9'
