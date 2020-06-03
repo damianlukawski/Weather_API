@@ -13,7 +13,7 @@ canvas.pack()
 
 
 def open_current_weather():
-
+    
 
 frame = tk.Frame(root, bg="#80c1ff", bd=15)
 frame.place(relx=0, rely=0.5, relwidth=1,
