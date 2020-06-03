@@ -4,13 +4,18 @@ import tkinter as tk
 from PIL import ImageTk, Image
 from tkinter import font
 from current_weather import Current_weather
+import find_capitals
 
 
-def check_weather():
+
+def Button1():
     root.destroy()
     Current_weather.create_window()
 
 
+def Button2():
+    root.destroy()
+    find_capitals.find_capitals()
 
 root = tk.Tk()
 
@@ -22,10 +27,10 @@ canvas.pack()
 frame = tk.Frame(root, bg="#80c1ff", bd=15)
 frame.place(relx=0, rely=0.5, relwidth=1, relheight=1, anchor='w')  # relative width and height
 
-button1 = tk.Button(frame, text="Check current weather", font=("Calibri", 12), command=lambda:check_weather())
+button1 = tk.Button(frame, text="Check current weather", font=("Calibri", 12), command=lambda:Button1())
 button1.place(relx=0, rely=0.03, relwidth=1, relheight=0.3, anchor="nw")
 
-button2 = tk.Button(frame, text="Weather Graph", font=("Calibri", 12))
+button2 = tk.Button(frame, text="Weather Graph", font=("Calibri", 12),  command=lambda:Button2())
 button2.place(relx=0, rely=0.36, relwidth=1, relheight=0.3, anchor="nw")
 
 button3 = tk.Button(frame, text="Finding perfect holidays", font=("Calibri", 12))
