@@ -9,7 +9,7 @@ from current_weather import Current_weather
 def check_weather():
     root.destroy()
     Current_weather.create_window()
-    root.mainloop()
+
 
 
 root = tk.Tk()
