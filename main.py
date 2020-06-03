@@ -5,6 +5,7 @@ from PIL import ImageTk, Image
 from tkinter import font
 from current_weather import Current_weather
 import find_capitals
+import plot_weather
 
 
 
@@ -16,6 +17,10 @@ def Button1():
 def Button2():
     root.destroy()
     find_capitals.find_capitals()
+
+def Button3():
+    root.destroy()
+    plot_weather.plot_weather()
 
 root = tk.Tk()
 
@@ -30,10 +35,10 @@ frame.place(relx=0, rely=0.5, relwidth=1, relheight=1, anchor='w')  # relative w
 button1 = tk.Button(frame, text="Check current weather", font=("Calibri", 12), command=lambda:Button1())
 button1.place(relx=0, rely=0.03, relwidth=1, relheight=0.3, anchor="nw")
 
-button2 = tk.Button(frame, text="Weather Graph", font=("Calibri", 12),  command=lambda:Button2())
+button2 = tk.Button(frame, text="Finding perfect holidays", font=("Calibri", 12),  command=lambda:Button2())
 button2.place(relx=0, rely=0.36, relwidth=1, relheight=0.3, anchor="nw")
 
-button3 = tk.Button(frame, text="Finding perfect holidays", font=("Calibri", 12))
+button3 = tk.Button(frame, text="Plotting weather for the next 36 hours", font=("Calibri", 12), command=lambda:Button3())
 button3.place(relx=0, rely=0.69, relwidth=1, relheight=0.3, anchor="nw")
 
 '''
