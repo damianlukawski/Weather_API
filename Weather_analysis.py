@@ -51,8 +51,9 @@ while i <len(list_of_capitals)-1:
 list_city_temp = zip(list_of_holiday_locations,list_of_holiday_temp, list_of_holiday_countries)
 list_city_temps = list(list_city_temp)
 print("if you wish to rest in a capital with temperature in range 15-25\N{DEGREE SIGN}C, no clouds and only slight wind please visit one of the following:")
-for city in list_city_temps:
-    result = '%s (%s), %s \N{DEGREE SIGN}C' %(city[0], city[2], str(city[1]))
+
+for i, city in enumerate(list_city_temps):
+    result = '%s. %s (%s), %s \N{DEGREE SIGN}C' %(str(i+1), city[0], city[2], str(city[1]))
     print(result)
 
 
