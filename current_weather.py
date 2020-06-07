@@ -24,7 +24,7 @@ class Current_weather:
         canvas = tk.Canvas(root, width=800, height=500)
         canvas.pack()
 
-        background_image = tk.PhotoImage(file='weather_image.png')
+        background_image = tk.PhotoImage(master=canvas, file='weather_image.png')
         background_label = tk.Label(root, image=background_image)
         background_label.place(relwidth=1, relheight=1)
 

@@ -50,7 +50,7 @@ def plot_weather():
                             font=("Calibri", 12), command=graph)
         button2.place(rely=0.45, relx=0.7, relwidth=0.3, relheight=0.3)
 
-    background_image = tk.PhotoImage(file='weather_image.png')
+    background_image = tk.PhotoImage(master = canvas, file='weather_image.png')
     background_label = tk.Label(root, image=background_image)
     background_label.place(relwidth=1, relheight=1)
 

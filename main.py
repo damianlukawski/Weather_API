@@ -10,16 +10,13 @@ import plot_weather
 
 
 def Button1():
-    root.destroy()
     Current_weather.create_window()
 
 
 def Button2():
-    root.destroy()
     find_capitals.find_capitals()
 
 def Button3():
-    root.destroy()
     plot_weather.plot_weather()
 
 root = tk.Tk()
