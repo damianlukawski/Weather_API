@@ -26,16 +26,21 @@ canvas.pack()
 
 
 
-frame = tk.Frame(root, bg="#80c1ff", bd=15)
+frame = tk.Frame(root, bg="#ccffff", bd=15)
 frame.place(relx=0, rely=0.5, relwidth=1, relheight=1, anchor='w')  # relative width and height
 
-button1 = tk.Button(frame, text="Check current weather", font=("Calibri", 12), command=lambda:Button1())
+button1 = tk.Button(frame, text="Check current weather", font=("Calibri", 12), command=lambda:Button1(), bg="#66ccff",activebackground="#0000cc", bd=5, activeforeground="white")
 button1.place(relx=0, rely=0.03, relwidth=1, relheight=0.3, anchor="nw")
 
-button2 = tk.Button(frame, text="Finding perfect holidays", font=("Calibri", 12),  command=lambda:Button2())
+button2 = tk.Button(frame, text="Finding perfect holidays", font=("Calibri", 12),  command=lambda:Button2(),
+                    bg="#66ccff", activebackground="#0000cc", activeforeground="white",
+                     bd=5)
 button2.place(relx=0, rely=0.36, relwidth=1, relheight=0.3, anchor="nw")
 
-button3 = tk.Button(frame, text="Plotting weather for the next 36 hours", font=("Calibri", 12), command=lambda:Button3())
+
+button3 = tk.Button(frame, text="Plotting weather for the next 36 hours",bg="#66ccff",activebackground="#0000cc", bd=5, activeforeground="white",
+                    font=("Calibri", 12), command=lambda:Button3(),
+                    justify='left', wraplength=150)
 button3.place(relx=0, rely=0.69, relwidth=1, relheight=0.3, anchor="nw")
 
 '''
