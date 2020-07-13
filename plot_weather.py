@@ -46,6 +46,7 @@ def plot_weather():
             plt.ylabel("Temperature [\N{DEGREE SIGN}C]")
             plt.show()
 
+
         button2 = tk.Button(upper_frame, text="graph",
                             font=("Calibri", 12), command=graph)
         button2.place(rely=0.45, relx=0.7, relwidth=0.3, relheight=0.3)
@@ -59,12 +60,12 @@ def plot_weather():
                       relheight=0.2, anchor='n')  # relative width and height
 
     label1 = tk.Label(upper_frame, text="Podaj nazwe miasta: ", font=("Calibri", 12))
-    label1.place(rely=0.05, relwidth=0.4, relheight=0.25)
+    label1.place(rely=0.05, relwidth=0.6, relheight=0.25)
     #label2 = tk.Label(upper_frame, text="Za ile godzin: ", font=("Calibri", 12))
     #label2.place(rely=0.05, relx=0.45, relwidth=0.2, relheight=0.25)
 
     entry1 = tk.Entry(upper_frame, font=("Calibri", 12))
-    entry1.place(rely=0.45, relwidth=0.4, relheight=0.4)
+    entry1.place(rely=0.45, relwidth=0.6, relheight=0.4)
     # entry2 = tk.Entry(upper_frame, font=("Calibri",12))
     # entry2.place(rely=0.45, relx=0.45, relwidth=0.2, relheight=0.4)
     lower_frame = tk.Frame(root, bg="#80c1ff", bd=10)

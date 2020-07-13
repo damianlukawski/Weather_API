@@ -62,7 +62,9 @@ def find_capitals():
 
     canvas = tk.Canvas(root, width=800, height=500)
     canvas.pack()
-
+    background_image = tk.PhotoImage(master=canvas, file='weather_image.png')
+    background_label = tk.Label(root, image=background_image)
+    background_label.place(relwidth=1, relheight=1)
     upper_frame = tk.Frame(root, bg="#80c1ff", bd=5)
     upper_frame.place(relx=0.5, rely=0.1, relwidth=1,
                       relheight=0.3, anchor='n')  # relative width and height
@@ -78,7 +80,7 @@ def find_capitals():
 
     lower_frame = tk.Frame(root, bg="#80c1ff", bd=10)
     lower_frame.place(relx=0.5, rely=0.35, relwidth=1, relheight=0.5, anchor='n')
-    label2 = tk.Label(lower_frame, text="Type city name to see current weather", fg="black", font=("Calibri", 12),
+    label2 = tk.Label(lower_frame, text="Please press 'Check weather' button and wait for the app to search through all capitals", fg="black", font=("Calibri", 12),
                       justify="left", anchor="w", wraplength=400)
     label2.place(relwidth=1, relheight=1)
 
